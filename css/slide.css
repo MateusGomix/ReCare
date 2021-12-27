@@ -1,0 +1,16 @@
+@media (min-width: 1024px){
+    .slide-info{
+        background-color: #3949AB;
+        display: flex;
+        height: 100vh;
+        width: 55%;
+    }
+    .slide-imagem{       
+        align-self: center;
+        margin: 0 auto;   
+        width: 221px;
+        height: 221px;
+    }
+    
+}
+
