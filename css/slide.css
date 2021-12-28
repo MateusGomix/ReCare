@@ -4,8 +4,10 @@
     height: 100vh;
 }
 .slide-imagem{
-    width: 165px;
-    height: 165px;
+    width: 221px;
+    height: 221px;
+    background-image: url(../image/elipse.png);
+    
 }
 .container{
     height: 100%;
@@ -22,9 +24,9 @@
 .img1{
     background-image: url(../image/doctor.svg);
     background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
-    margin: 0 auto ;
+    width: 165px;
+    height: 165px;
+    margin: 28px auto;
 }
 .img2{
   
@@ -32,15 +34,27 @@
 .img3{
 }
 
-.slide-texto {
+.slide-texto{
+    font-family: 'Open Sans', sans-serif;  
+    color: #FFFFFF;
+    line-height: 200%;
+    width: 411px;
+    position: relative;
+    top: 34px;
+    height: 130px;
 }
-
-.slide-texto h3{
+.slide-texto h1{
     font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 48px;
 }
 
 .slide-texto p{
-    font-size: 20px;
+    font-weight: 400;
+    font-size: 14px;
+    font-style: normal;
+    line-height: 28px;
 }
 
 @media  only screen and (min-device-width: 1024px){    
@@ -60,19 +74,6 @@
         width: 221px;
         height: 221px;
     }
-    .slide-logo{
-        overflow: hidden;
-        background-size: cover;
-        background-position: center;
-        width: 100%;
-        height: 100vh;
-    }
-    .slide-quem--somos{
-        overflow: hidden;
-        background-size: cover;
-        background-position: center;
-        width: 100%;
-        height: 100vh;
-    }
+  
 }
  */
