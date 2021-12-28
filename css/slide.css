@@ -1,16 +1,78 @@
-@media (min-width: 1024px){
-    .slide-info{
-        background-color: #3949AB;
-        display: flex;
-        height: 100vh;
-        width: 55%;
+.slide-info {
+    background-color: #3949AB; 
+    width: 60%;
+    height: 100vh;
+}
+.slide-imagem{
+    width: 165px;
+    height: 165px;
+}
+.container{
+    height: 100%;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-evenly;
+}
+.c-carousel--container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.img1{
+    background-image: url(../image/doctor.svg);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto ;
+}
+.img2{
+  
+}
+.img3{
+}
+
+.slide-texto {
+}
+
+.slide-texto h3{
+    font-size: 24px;
+}
+
+.slide-texto p{
+    font-size: 20px;
+}
+
+@media  only screen and (min-device-width: 1024px){    
+   
+
+    .slide-texto {
+        width: 411px;
     }
+}
+
+/* @media (min-width: 1024px){
+    
+
     .slide-imagem{       
         align-self: center;
         margin: 0 auto;   
         width: 221px;
         height: 221px;
     }
-    
+    .slide-logo{
+        overflow: hidden;
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 100vh;
+    }
+    .slide-quem--somos{
+        overflow: hidden;
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 100vh;
+    }
 }
-
+ */
