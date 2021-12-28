@@ -4,7 +4,7 @@ const $simpleCarousel = document.querySelector(".js-carousel--simple");
 new Glider($simpleCarousel, {
     slidesToShow: 1,
     slidesToScroll: 1,
-    draggable: true,
+    draggable: false,
     dots: ".js-carousel--simple-dots",
     arrows: {
         prev: ".js-carousel--simple-prev",

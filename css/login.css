@@ -1,0 +1,63 @@
+.container-login{
+    width: 100vw;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    place-content: space-evenly;
+    position: relative;
+    top: 124px;
+}
+.container-bem--vindo{
+    height: 65px;
+}
+.bem-vindo{
+    font-family: Open Sans;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 33px;
+    display: flex;
+    color: #343434;
+    justify-content: center;
+}
+.container-input{
+    width: 360px;
+    height: 115px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.input{
+    width: 300px;
+    height:40px;
+    border: 1px solid #D0D0D0;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+.link-senha{
+    text-decoration: none;
+    color: #6F74DD;
+    font-family: Open Sans;
+    font-size: 14px;
+    line-height: 19px;
+    position: relative;
+    left: 86px;
+}
+.link-senha:hover{
+    color: black;
+}
+.container-botao{
+    margin: 0 auto;
+    text-align: center;
+    
+}
+
+.botao{
+    width: 300px;
+    height:40px;
+    border: 1px solid #3949AB;
+    background-color: #3949AB;
+    color: #ffffff;
+    border-radius: 20px;
+}

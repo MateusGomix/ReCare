@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/slide.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/body.css">
     <link rel="stylesheet" href="./css/slider.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,9 +19,9 @@
 
 <body>
     <div class="slide-info">
-        <article class="c-carousel c-carousel--simple container">
+        <div class="c-carousel c-carousel--simple container">
             <div class="c-carousel__slides js-carousel--simple" style="width: 100%;">
-                <article class="c-carousel__slide c-carousel--container ">
+                <div class="c-carousel__slide c-carousel--container" style="width:888px;">
                     <div class="slide-imagem">
                         <figure class="img1"></figure>
                     </div>
@@ -28,31 +30,49 @@
                         <p>Remote Care, cuidando, onde estiver</p>
                         <p>Sistema remoto de verificação de sinais vitais</p>
                     </div>
-                </article>
+                </div>
 
-                <article class="c-carousel__slide">
-                    <div >
+                <div class="c-carousel__slide">
+                    <!-- <div >
                         <figure class="img2"></figure>
                     </div>
                     <div class="slide-texto">
 
-                    </div>
-                </article>
+                    </div> -->
+                </div>
 
-                <article class="c-carousel__slide ">
-                    <div>
+                <div class="c-carousel__slide ">
+                    <!-- <div>
                         <figure class=" img3">
                         </figure>
                     </div>
                     <div class="slide-texto">
 
-                    </div>
-                </article>
+                    </div> -->
+                </div>
             </div>
             <div class="js-carousel--simple-dots " role="tablist" style="position: relative;
             top: -43px;"></div>
-        </article>
-
+        </div>
+    </div>
+    <div class="container-login">
+        <div class="container-bem--vindo">
+            <h2 class="bem-vindo">Bem Vindo</h2>
+        </div>
+        <div class="container-input">
+            <div>
+                <label for="email"></label>
+                <input type="email" placeholder="Email" id="email" name="email" class="input">
+            </div>
+            <div>
+                <label for="pass"></label>
+                <input type="password" placeholder="Senha" id="pass" name="password" required class="input">
+            </div>
+            <a class="link-senha" href="#">Esqueceu a senha?</a>
+        </div>
+        <div class="container-botao">
+            <input type="submit" value="Log in" class="botao">
+        </div>
     </div>
 
 
