@@ -1,4 +1,7 @@
-.container-login{
+body{
+    display: flex;
+}
+.container-login {
     width: 100vw;
     height: 60vh;
     display: flex;
@@ -7,11 +10,13 @@
     position: relative;
     top: 124px;
 }
-.container-bem--vindo{
+
+.container-bem--vindo {
     height: 65px;
 }
-.bem-vindo{
-    font-family: Open Sans;
+
+.bem-vindo {
+    font-family: 'Open Sans';
     font-weight: 600;
     font-size: 24px;
     line-height: 33px;
@@ -19,7 +24,8 @@
     color: #343434;
     justify-content: center;
 }
-.container-input{
+
+.container-input {
     width: 360px;
     height: 115px;
     margin: 0 auto;
@@ -28,14 +34,16 @@
     flex-direction: column;
     justify-content: space-evenly;
 }
-.input{
+
+.input {
     width: 300px;
-    height:40px;
+    height: 40px;
     border: 1px solid #D0D0D0;
     box-sizing: border-box;
     border-radius: 8px;
 }
-.link-senha{
+
+.link-senha {
     text-decoration: none;
     color: #6F74DD;
     font-family: Open Sans;
@@ -44,18 +52,20 @@
     position: relative;
     left: 86px;
 }
-.link-senha:hover{
+
+.link-senha:hover {
     color: black;
 }
-.container-botao{
+
+.container-botao {
     margin: 0 auto;
     text-align: center;
-    
+
 }
 
-.botao{
+.botao {
     width: 300px;
-    height:40px;
+    height: 40px;
     border: 1px solid #3949AB;
     background-color: #3949AB;
     color: #ffffff;
