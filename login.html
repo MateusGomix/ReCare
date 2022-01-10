@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/slide.css">
     <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/body.css">
     <link rel="stylesheet" href="./css/slider.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -59,19 +60,29 @@
             <h2 class="bem-vindo">Bem Vindo</h2>
         </div>
         <div class="container-input">
-            <div>
-                <label for="email"></label>
-                <input type="email" placeholder="Email" id="email" name="email" class="input">
-            </div>
-            <div>
-                <label for="pass"></label>
-                <input type="password" placeholder="Senha" id="pass" name="password" required class="input">
-            </div>
-            <a class="link-senha" href="#">Esqueceu a senha?</a>
-        </div>
-        <div class="container-botao">
-            <button type="submit" class="botao">Entrar</button>
-        </div>
+            <form method="POST" action="login.php">
+                <div>
+                    <label for="cpf"></label>
+                    <input type="cpf" placeholder="CPF" id="cpf" name="cpf" class="input">
+                </div>
+                <div>
+                    <label for="pass"></label>
+                    <input type="password" placeholder="Senha" id="pass" name="password" required class="input">
+                </div>
+            
+                    <a class="link-senha" href="#">Esqueceu a senha?</a>
+                </div>
+                <div class="container-botao">
+                    <input type="submit" value="Log in" class="botao">
+                </div>
+
+                <select name="tipo">
+                    <option value="Admin">Administrador</option>
+                    <option value="Cuidador">Cuidador</option>
+                    <option value="Medico">Médico</option>
+                    <option value="Paciente">Paciente</option>
+                </select>
+            </form>
     </div>
 
 
