@@ -5,30 +5,77 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../css/cadastro-cabecalho.css">
+  <link rel="stylesheet" href="../css/cadastro-info.css">
+  <link rel="stylesheet" href="../css/footer.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;400&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap" rel="stylesheet">
+
   <title> Cadastro de Cuidador </title>
 
 </head>
 
 <body>
+  <header>
+    <div class="cabecalho">
+      <div class="fig">
+        <figure>
+          <img src="../image/elipse.png">
+          <img src="../image/doctor.svg" id="doctor">
+        </figure>
+        <figcaption class="marca">ReCare</figcaption>
 
-<form method="POST" action="CuidadorCadastro.php">
+      </div>
 
-  <label>Nome:</label><input type="text" name="nome" id="nome"><br>
+      <nav>
+        <ul>
+          <li><a href="#">MENU</a></li>
+          <li><a href="#">SAIR</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <section>
+    <div class="titulo">
+      <h1 id="titulo">Cadastro de Cuidador</h1>
+    </div>
 
-  <label>CPF:</label><input type="number" name="cpf" id="cpf"><br>
+    <form method="POST" action="CuidadorCadastro.php" class="formulario">
+      <div class="form-entrada">
+        <label>Nome*</label><input type="text" name="nome" id="nome" class="entrada" required><br>
+      </div>
 
-  <label>Data de nascimento:</label><input type="date" name="nascimento" id="nascimento"><br>
+      <div class="form-entrada">
+        <label>CPF*</label><input type="number" name="cpf" id="cpf" class="entrada" required><br>
+      </div>
 
-  <label>Telefone:</label><input type="number" name="telefone" id="telefone"><br>
+      <div class="form-entrada">
+        <label>Data de nascimento*</label><input type="date" name="nascimento" id="nascimento" class="entrada"
+          required><br>
+      </div>
 
-  <label>Email:</label><input type="email" name="email" id="email"><br>
+      <div class="form-entrada">
+        <label>Telefone*</label><input type="number" name="telefone" id="telefone" class="entrada" required><br>
+      </div>
 
-  <label>Senha:</label><input type="password" name="senha" id="senha"><br>
+      <div class="form-entrada">
+        <label>Email*</label><input type="email" name="email" id="email" class="entrada" required><br>
+      </div>
 
-  <input type="submit" value="Cadastrar" id="cadastrar" name="cadastrar">
+      <div class="form-entrada">
+        <label>Senha*</label><input type="password" name="senha" id="senha" class="entrada" required><br>
+      </div>
 
-</form>
+      <input type="submit" value="Cadastrar" id="cadastrar" name="cadastrar" class="entrada">
 
+    </form>
+  </section>
+  <footer>
+
+  </footer>
 </body>
 
 </html>

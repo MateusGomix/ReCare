@@ -71,3 +71,11 @@ body{
     color: #ffffff;
     border-radius: 20px;
 }
+.tipo{
+    width: 300px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 15px;
+    height: 40px;
+    border-radius: 20px;
+}

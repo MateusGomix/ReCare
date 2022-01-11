@@ -1,0 +1,32 @@
+section {
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 30px;
+    box-shadow: 0 0 1em rgb(0 0 0 / 50%);
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-evenly;
+
+}
+
+form{
+    margin-top: 4em;
+}
+
+.tipo-cadastro {
+    width: 270px;
+    height: 270px;
+    border-radius: 30px;
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    color: black;
+    border-color: #ECEDEF;
+    border-width: 5px;
+}
+#medico{
+    margin-bottom: 4em;
+}
