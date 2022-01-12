@@ -1,66 +1,32 @@
-body, ul {
-    padding: 0px 0px 0px 0px;
-    margin: 0px 0px 0px 0px;
+body {
+    background-image: url(../image/back.jpeg);
+    background-size: cover;
 }
 
 header {
-    width: 100vw;
-    height: 75px;
-    background-color: #3949AB;
+    height: 10vh;
 }
 
-.cabecalho {
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-    justify-content: space-between;
-}
-.fig{
-    display: flex;
-    width: 20%;
-    justify-content: space-evenly;
-}
-figure {
-    width: 70px;
-    margin: 0px 0px 0px 0px;
-    height: 75px;
-}
-
-img {
-    width: 100%;
-    overflow: hidden;
-}
-
-.marca{
-    font-size: 24px;
-    font-family: 'Inter', sans-serif;
+ul {
     color: white;
-    align-self: center;
-}
-
-#doctor {
-    position: relative;
-    top: -75px;
-}
-
-nav {
-    width: 20%;
-    font-size: 16px;
-    font-family: 'Inter', sans-serif;
-}
-
-nav ul {
-    display: flex;
-    justify-content: space-evenly;
-}
-
-nav li {
     list-style: none;
+    font-size: 30px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+    display: flex;
+    justify-content: space-evenly;
+    width: 30%;
 }
 
-nav a {
-    text-decoration: none;
+#color{
+    color: #19204B;
+    font-weight: 400;
+}
+a {
+    font-size: 18px;
     color: white;
+    text-decoration: none;
+}
+label{
+    font-weight: 400;
 }

@@ -5,13 +5,16 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="stylesheet" href="../css/cadastro-cabecalho.css">
   <link rel="stylesheet" href="../css/cadastro-info.css">
   <link rel="stylesheet" href="../css/footer.css">
+
+  
   <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;400&amp;display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap" rel="stylesheet">
   <title> Cadastro de Médico </title>
 
 
@@ -20,21 +23,15 @@
 <body>
   <header>
     <div class="cabecalho">
-      <div class="fig">
-        <figure>
-          <img src="../image/elipse.png">
-          <img src="../image/doctor.svg" id="doctor">
-        </figure>
-        <figcaption class="marca">ReCare</figcaption>
-
-      </div>
-
       <nav>
         <ul>
-          <li><a href="#">MENU</a></li>
+          <label>Re<span id="color">Care</span></label>
+          <li><a href="Cadastro.html">MENU</a></li>
           <li><a href="#">SAIR</a></li>
         </ul>
       </nav>
+
+
     </div>
   </header>
   <section>
@@ -46,13 +43,14 @@
       <div class="form-entrada">
         <label>Nome*</label><input type="text" name="nome" id="nome" class="entrada" required><br>
       </div>
-      
+
       <div class="form-entrada">
         <label>CPF*</label><input type="number" name="cpf" id="cpf" class="entrada" required><br>
       </div>
 
       <div class="form-entrada">
-        <label>Data de nascimento*</label><input type="date" name="nascimento" id="nascimento" class="entrada" required><br>
+        <label>Data de nascimento*</label><input type="date" name="nascimento" id="nascimento" class="entrada"
+          required><br>
       </div>
 
       <div class="form-entrada">
@@ -62,15 +60,15 @@
       <div class="form-entrada">
         <label>Email*</label><input type="email" name="email" id="email" class="entrada" required><br>
       </div>
-      
-      <div class="form-entrada" >
+
+      <div class="form-entrada">
         <label>Senha*</label><input type="password" name="senha" id="senha" class="entrada" required><br>
       </div>
 
       <div class="form-entrada">
         <label>CRM*</label><input type="number" name="crm" id="crm" class="entrada" required><br>
       </div>
-      
+
       <div class="cadastrar">
         <input type="submit" value="Cadastrar" id="cadastrar" name="cadastrar" class="entrada">
       </div>
