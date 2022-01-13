@@ -8,6 +8,7 @@ $email = $_POST['email'];
 $senha = MD5($_POST['senha']);
 $contato = $_POST['contato'];
 $cuidador = $_POST['cuidador'];
+$medico = $_POST['medico'];
 
 if($senha == "" || $senha == null){ //Senha não preenchida
   echo"<script language='javascript' type='text/javascript'>alert('O campo 'Senha' deve ser preenchido');window.location.href='PacienteCadastro.html';</script>";
@@ -17,6 +18,9 @@ else if($cpf == "" || $cpf == null){ //CPF não preenchido
 }
 else if($nome == "" || $nome == null){ //Nome não preenchido
   echo"<script language='javascript' type='text/javascript'>alert('O campo 'Nome' deve ser preenchido');window.location.href='PacienteCadastro.html';</script>";
+}
+else if($medico == "" || $medico == null){ //CPF do medico não preenchido
+  echo"<script language='javascript' type='text/javascript'>alert('O campo 'CPF do Médico' deve ser preenchido');window.location.href='PacienteCadastro.html';</script>";
 }
 else{ //Dados sujeitos a cadastro
   //Conectando ao BD
@@ -42,6 +46,18 @@ else{ //Dados sujeitos a cadastro
         echo"<script language='javascript' type='text/javascript'>alert('Não foi possível realizar o cadastro');window.location.href='PacienteCadastro.html';</script>";
       }
     }
+
+    //Pesquisando pelo CPF do médico
+    $query_select = "SELECT ID_Pessoa FROM Pessoa, Medico WHERE CPF = '$medico' AND Pessoa.ID_Pessoa = Medico.ID_Medico";
+    $select = mysqli_query($connect, $query_select);
+    if(mysqli_num_rows($select) == 0){ //Não há registro desse médico
+      echo"<script language='javascript' type='text/javascript'>alert('Não foi possível realizar o cadastro: médico não encontrado');window.location.href='PacienteCadastro.html';</script>";
+    }
+    else{
+      $array = mysqli_fetch_array($select);
+      $idmedarray = $array['ID_Pessoa'];
+    }
+
     //Inserindo os dados em Paciente
 
     //Pesquisando o ID correto do Paciente
@@ -53,7 +69,7 @@ else{ //Dados sujeitos a cadastro
 
       if($cuidador == null || $cuidador == ""){ //Cuidador não preenchido
         //Inserindo na tabela Paciente
-        $query = "INSERT INTO Paciente (ID_Paciente, TelefoneContato) VALUES ('$idarray','$contato')";
+        $query = "INSERT INTO Paciente (ID_Paciente, TelefoneContato, ID_Medico) VALUES ('$idarray','$contato','$idmedarray')";
         $insert = mysqli_query($connect, $query, $result_mode = MYSQLI_STORE_RESULT);
 
         if(!$insert){
@@ -72,19 +88,19 @@ else{ //Dados sujeitos a cadastro
           $array = mysqli_fetch_array($select);
           $cuidadorarray = $array['ID_Pessoa'];
 
-          $query = "INSERT INTO Paciente (ID_Paciente, TelefoneContato, ID_Cuidador) VALUES ('$idarray','$contato','$cuidadorarray')";
+          $query = "INSERT INTO Paciente (ID_Paciente, TelefoneContato, ID_Cuidador, ID_Medico) VALUES ('$idarray','$contato','$cuidadorarray','$idmedarray')";
           $insert = mysqli_query($connect, $query, $result_mode = MYSQLI_STORE_RESULT);
 
           if($insert){
-            echo"<script language='javascript' type='text/javascript'>alert('Cadastro realizado com sucesso!');window.location.href='PacienteCadastro.html';</script>";
+            echo"<script language='javascript' type='text/javascript'>alert('Cadastro realizado com sucesso!');window.location.href='../login.html';</script>";
           }
           else{
-            echo"<script language='javascript' type='text/javascript'>alert('Não foi possível realizar o cadastro.');window.location.href='../login.html';</script>";
+            echo"<script language='javascript' type='text/javascript'>alert('Não foi possível realizar o cadastro.');window.location.href='PacienteCadastro.html';</script>";
           }
 
         }
         else{ //ID do cuidador não encontrado
-          $query = "INSERT INTO Paciente (ID_Paciente, TelefoneContato) VALUES ('$idarray','$contato')";
+          $query = "INSERT INTO Paciente (ID_Paciente, TelefoneContato, ID_Medico) VALUES ('$idarray','$contato','$idmedarray')";
           $insert = mysqli_query($connect, $query, $result_mode = MYSQLI_STORE_RESULT);
 
           if($insert){
