@@ -34,7 +34,7 @@ else{ //Dados sujeitos a cadastro
     $query_select = "SELECT CPF FROM Pessoa WHERE CPF = '$cpf'";
     $select = mysqli_query($connect, $query_select);
     if(mysqli_num_rows($select) == 0){ //Não cadastrado em Pessoa
-      //Inserindo os dados em Pessoa
+      //Inserindo os dados na tabela Pessoa
       $query = "INSERT INTO Pessoa (Nome, CPF, DataNascimento, Telefone, Email, Senha) VALUES ('$nome','$cpf','$nascimento','$telefone','$email','$senha')";
       $insert = mysqli_query($connect, $query, $result_mode = MYSQLI_STORE_RESULT);
 
@@ -56,11 +56,11 @@ else{ //Dados sujeitos a cadastro
         $query = "INSERT INTO Paciente (ID_Paciente, TelefoneContato) VALUES ('$idarray','$contato')";
         $insert = mysqli_query($connect, $query, $result_mode = MYSQLI_STORE_RESULT);
 
-        if($insert){
+        if(!$insert){
           echo"<script language='javascript' type='text/javascript'>alert('Não foi possível realizar o cadastro.');window.location.href='PacienteCadastro.html';</script>";
         }
         else{
-          echo"<script language='javascript' type='text/javascript'>alert('Cadastro realizado com sucesso!');window.location.href='login.html';</script>";
+          echo"<script language='javascript' type='text/javascript'>alert('Cadastro realizado com sucesso!');window.location.href='../login.html';</script>";
         }
       }
       else{ //Cuidador preenchido
@@ -79,7 +79,7 @@ else{ //Dados sujeitos a cadastro
             echo"<script language='javascript' type='text/javascript'>alert('Cadastro realizado com sucesso!');window.location.href='PacienteCadastro.html';</script>";
           }
           else{
-            echo"<script language='javascript' type='text/javascript'>alert('Não foi possível realizar o cadastro.');window.location.href='login.html';</script>";
+            echo"<script language='javascript' type='text/javascript'>alert('Não foi possível realizar o cadastro.');window.location.href='../login.html';</script>";
           }
 
         }
@@ -91,7 +91,7 @@ else{ //Dados sujeitos a cadastro
             echo"<script language='javascript' type='text/javascript'>alert('Cadastro realizado, porém cuidador não encontrado e deixado em branco.');window.location.href='PacienteCadastro.html';</script>";
           }
           else{
-            echo"<script language='javascript' type='text/javascript'>alert('Não foi possível realizar o cadastro.');window.location.href='login.html';</script>";
+            echo"<script language='javascript' type='text/javascript'>alert('Não foi possível realizar o cadastro.');window.location.href='../login.html';</script>";
           }
         }
 
