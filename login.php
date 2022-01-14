@@ -23,7 +23,7 @@ else{ //Dados sujeitos a login
     $select = mysqli_query($connect, $query_select);
 
     if(mysqli_num_rows($select) > 0){ //Corretos
-      setcookie(“cpf”,$cpf);
+      setcookie("cpf",$cpf);
       echo"window.location.href='index$tipo.html';</script>";
     }
     else{ //Incorretos
@@ -36,7 +36,7 @@ else{ //Dados sujeitos a login
     $select = mysqli_query($connect, $query_select);
 
     if(mysqli_num_rows($select) > 0){ //Corretos
-      setcookie(“cpf”,$cpf);
+      setcookie("cpf",$cpf);
       echo"window.location.href='indexCuidador.html';</script>";
     }
     else{ //Incorretos
