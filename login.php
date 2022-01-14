@@ -1,4 +1,5 @@
 <?php
+session_start();
 //Coletando variáveis
 $cpf = $_POST['cpf'];
 $senha = MD5($_POST['password']);
@@ -19,12 +20,14 @@ else{ //Dados sujeitos a login
   if($tipo == "Admin" || $tipo == "Medico" || $tipo == "Paciente") //Login de admin, medico e paciente
   {
     //pesquisando se CPF e senha estão corretos
-    $query_select = "SELECT CPF FROM Pessoa, $tipo WHERE Pessoa.CPF = '$cpf' AND Pessoa.Senha = '$senha' AND Pessoa.ID_Pessoa = $tipo.ID_$tipo";
+    $query_select = "SELECT NOME FROM Pessoa, $tipo WHERE Pessoa.CPF = '$cpf' AND Pessoa.Senha = '$senha' AND Pessoa.ID_Pessoa = $tipo.ID_$tipo";
     $select = mysqli_query($connect, $query_select);
 
     if(mysqli_num_rows($select) > 0){ //Corretos
       setcookie("cpf",$cpf);
-      echo"window.location.href='index$tipo.html';</script>";
+      $nome = mysqli_fetch_assoc($select);
+      $_SESSION['nome'] = $nome['NOME'];
+      echo"<script language = 'javascript' type='text/javascript'>window.location.href='Indexes/index$tipo.php';</script>";
     }
     else{ //Incorretos
       echo"<script language='javascript' type='text/javascript'>alert('CPF e/ou senha incorretos!');window.location.href='login.html';</script>";
@@ -32,11 +35,13 @@ else{ //Dados sujeitos a login
   }
   else{ //Login de cuidador
     //pesquisando se CPF e senha estão corretos
-    $query_select = "SELECT CPF FROM Pessoa WHERE CPF = '$cpf' AND Pessoa.Senha = '$senha'";
+    $query_select = "SELECT NOME FROM Pessoa WHERE CPF = '$cpf' AND Pessoa.Senha = '$senha'";
     $select = mysqli_query($connect, $query_select);
 
     if(mysqli_num_rows($select) > 0){ //Corretos
       setcookie("cpf",$cpf);
+      $nome = mysqli_fetch_assoc($select);
+      $_SESSION['nome'] = $nome['NOME'];
       echo"window.location.href='indexCuidador.html';</script>";
     }
     else{ //Incorretos
