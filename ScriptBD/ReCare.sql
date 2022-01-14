@@ -4,8 +4,6 @@
 
 CREATE DATABASE ReCare;
 
-DROP DATABASE ReCare;
-
 #CRIANDO A TABELA PAI PESSOA
 CREATE TABLE Pessoa(
 						ID_Pessoa integer UNSIGNED NOT NULL AUTO_INCREMENT,
@@ -78,13 +76,3 @@ CREATE TABLE AtendeEm(
 PRIMARY KEY(ID_Medico, ID_Hospital),
 FOREIGN KEY(ID_Medico) REFERENCES Pessoa(ID_Pessoa),
 FOREIGN KEY(ID_Hospital) REFERENCES Hospital(ID_Hospital));
-
-SELECT * FROM Pessoa, Admin WHERE ID_Pessoa = ID_Admin;
-SELECT * FROM Medico;
-SELECT * FROM Admin;
-SELECT * FROM Hospital;
-SELECT * FROM Paciente;
-DELETE FROM Pessoa;
-DELETE FROM Paciente;
-DELETE FROM Admin;
-DELETE FROM Hospital;
