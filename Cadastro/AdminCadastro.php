@@ -64,7 +64,7 @@ else{ //Dados sujeitos a cadastro
         $insert = mysqli_query($connect, $query, $result_mode = MYSQLI_STORE_RESULT);
 
         if($insert){
-          echo"<script language='javascript' type='text/javascript'>alert('Cadastro realizado com sucesso!');window.location.href='login.html';</script>";
+          echo"<script language='javascript' type='text/javascript'>alert('Cadastro realizado com sucesso!');window.location.href='../login.html';</script>";
         }
         else{
           echo"<script language='javascript' type='text/javascript'>alert('Não foi possível realizar o cadastro.');window.location.href='AdminCadastro.html';</script>";
