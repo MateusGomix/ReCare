@@ -30,3 +30,12 @@ a {
 label{
     font-weight: 400;
 }
+
+@media (max-width:800px){
+    label{
+        margin-left:55px;
+    }
+    li{
+        margin-left: 15px;
+    }
+}

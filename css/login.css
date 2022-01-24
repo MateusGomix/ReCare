@@ -2,7 +2,7 @@ body{
     display: flex;
 }
 .container-login {
-    width: 100vw;
+    margin: 0 auto;
     height: 60vh;
     display: flex;
     flex-direction: column;

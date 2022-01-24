@@ -46,3 +46,13 @@ form {
     border-color: #ECEDEF;
     border-width: 2px;
 }
+
+@media (max-width: 580px) {
+    section{
+        width: auto;
+    }
+    .tipo-cadastro {
+        width: 200px;
+    }
+    
+}

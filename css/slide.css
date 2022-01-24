@@ -1,78 +1,95 @@
 .slide-info {
-    background-color: #3949AB; 
+    background-color: #3949AB;
     width: 60%;
     height: 100vh;
 }
-.slide-imagem{
-    width: 221px;
-    height: 221px;
-    background-image: url(../image/elipse.png);
-}
-.container{
+
+
+.container {
     height: 100%;
     flex-direction: column;
     display: flex;
     justify-content: space-evenly;
 }
-.c-carousel--container{
+
+.c-carousel--container {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
 }
-.img1{
-    background-image: url(../image/doctor.svg);
+
+.img1 {
+    background-image: url(../image/Medicine-pana.svg);
     background-repeat: no-repeat;
-    width: 165px;
-    height: 165px;
-    margin: 28px auto;
-}
-.img2{
-  
-}
-.img3{
+    width: 390px;
+    height: 265px;
+    margin: 0 auto;
 }
 
-.slide-texto{
-    font-family: 'Open Sans', sans-serif;  
+.img2 {
+    background-image: url(../image/Doctors-img2.svg);
+    background-repeat: no-repeat;
+    width: 265px;
+    height: 265px;
+    margin: 0 auto;
+}
+
+.slide-texto {
+    font-family: 'Open Sans', sans-serif;
     color: #FFFFFF;
     line-height: 200%;
     width: 411px;
+    text-align: -webkit-center;
     position: relative;
     top: 34px;
     height: 130px;
+    margin: 0 auto;
+    display: contents;
 }
-.slide-texto h1{
+
+.slide-texto h1 {
     font-size: 24px;
     font-style: normal;
     font-weight: 600;
     line-height: 48px;
 }
 
-.slide-texto p{
+.slide-texto p {
     font-weight: 400;
     font-size: 14px;
     font-style: normal;
     line-height: 28px;
 }
 
-@media  only screen and (min-device-width: 1024px){    
-   
+@media only screen and (min-device-width: 1024px) {
+
 
     .slide-texto {
         width: 411px;
     }
 }
 
-/* @media (min-width: 1024px){
-    
+@media (max-width: 900px) {
 
-    .slide-imagem{       
-        align-self: center;
-        margin: 0 auto;   
-        width: 221px;
-        height: 221px;
+    .slide-info {
+        display: none;
     }
-  
+
+    .container-login {
+        background-image: url(../image/Medicine-pana.svg);
+        background-repeat: no-repeat;
+        width: 390px;
+        height: 265px;
+        margin: 0 auto;
+    }
+
+    .bem-vindo::after {
+        margin-left: 5px;
+        content: "ao Recare";
+    }
+
+    .link-senha {
+        color: black;
+    }
 }
- */

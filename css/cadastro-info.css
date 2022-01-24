@@ -73,3 +73,11 @@ section {
     background-color: #342be2;
     color: white;
 }
+@media (max-width: 680px){
+    section{
+        width:auto;
+    }
+    .form-entrada {
+        width: 100%;
+    }
+}
