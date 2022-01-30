@@ -41,6 +41,8 @@ FOREIGN KEY(ID_Admin) REFERENCES Pessoa(ID_Pessoa));
 CREATE TABLE Hospital(
 						ID_Hospital integer UNSIGNED NOT NULL AUTO_INCREMENT,
                         Nome varchar(50),
+                        Estado varchar(2),
+                        Cidade varchar(50),
                         Endereco varchar(50),
                         Telefone BIGINT,
                         ID_Admin integer UNSIGNED,
