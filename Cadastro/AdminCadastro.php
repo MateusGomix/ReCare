@@ -8,6 +8,8 @@ $email = $_POST['email'];
 $senha = MD5($_POST['senha']);
 $nomeHosp = $_POST['nomeHosp'];
 $endeHosp = $_POST['endeHosp'];
+$estado = $_POST['estado'];
+$cidade = $_POST['cidade'];
 $teleHosp = $_POST['teleHosp'];
 
 if($senha == "" || $senha == null){ //Senha não preenchida
@@ -60,7 +62,7 @@ else{ //Dados sujeitos a cadastro
         echo"<script language='javascript' type='text/javascript'>alert('Não foi possível realizar o cadastro.');window.location.href='AdminCadastro.html';</script>";
       }
       else{ //Sucesso, inserir na tabela Hospital
-        $query = "INSERT INTO Hospital (Nome, Endereco, Telefone, ID_Admin) VALUES ('$nomeHosp','$endeHosp','$teleHosp','$idarray')";
+        $query = "INSERT INTO Hospital (Nome, Estado, Cidade, Endereco, Telefone, ID_Admin) VALUES ('$nomeHosp','$estado','$cidade','$endeHosp','$teleHosp','$idarray')";
         $insert = mysqli_query($connect, $query, $result_mode = MYSQLI_STORE_RESULT);
 
         if($insert){
