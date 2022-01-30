@@ -47,28 +47,71 @@ CREATE TABLE Hospital(
 PRIMARY KEY(ID_Hospital),
 FOREIGN KEY(ID_Admin) REFERENCES Pessoa(ID_Pessoa));
 
-CREATE TABLE Sensor(
-						ID_Sensor integer UNSIGNED NOT NULL AUTO_INCREMENT,
-                        Tipo varchar(50),
+CREATE TABLE SensorPressao(
+						ID_Pressao integer UNSIGNED NOT NULL AUTO_INCREMENT,
                         Frequencia float,
                         Lim_Inf float,
                         Lim_Sup float,
                         ID_Paciente integer UNSIGNED,
                         ID_Hospital integer UNSIGNED,
                         ID_Medico integer UNSIGNED,
-PRIMARY KEY(ID_Sensor),
+PRIMARY KEY(ID_Pressao),
+FOREIGN KEY(ID_Paciente) REFERENCES Pessoa(ID_Pessoa),
+FOREIGN KEY(ID_Hospital) REFERENCES Hospital(ID_Hospital),
+FOREIGN KEY(ID_Medico) REFERENCES Pessoa(ID_Pessoa));
+
+CREATE TABLE SensorOxi(
+						ID_Oxi integer UNSIGNED NOT NULL AUTO_INCREMENT,
+                        Frequencia float,
+                        Lim_Inf float,
+                        Lim_Sup float,
+                        ID_Paciente integer UNSIGNED,
+                        ID_Hospital integer UNSIGNED,
+                        ID_Medico integer UNSIGNED,
+PRIMARY KEY(ID_Oxi),
+FOREIGN KEY(ID_Paciente) REFERENCES Pessoa(ID_Pessoa),
+FOREIGN KEY(ID_Hospital) REFERENCES Hospital(ID_Hospital),
+FOREIGN KEY(ID_Medico) REFERENCES Pessoa(ID_Pessoa));
+
+CREATE TABLE SensorRitmo(
+						ID_Ritmo integer UNSIGNED NOT NULL AUTO_INCREMENT,
+                        Frequencia float,
+                        Lim_Inf float,
+                        Lim_Sup float,
+                        ID_Paciente integer UNSIGNED,
+                        ID_Hospital integer UNSIGNED,
+                        ID_Medico integer UNSIGNED,
+PRIMARY KEY(ID_Ritmo),
+FOREIGN KEY(ID_Paciente) REFERENCES Pessoa(ID_Pessoa),
+FOREIGN KEY(ID_Hospital) REFERENCES Hospital(ID_Hospital),
+FOREIGN KEY(ID_Medico) REFERENCES Pessoa(ID_Pessoa));
+
+CREATE TABLE SensorTemp(
+						ID_Temp integer UNSIGNED NOT NULL AUTO_INCREMENT,
+                        Frequencia float,
+                        Lim_Inf float,
+                        Lim_Sup float,
+                        ID_Paciente integer UNSIGNED,
+                        ID_Hospital integer UNSIGNED,
+                        ID_Medico integer UNSIGNED,
+PRIMARY KEY(ID_Temp),
 FOREIGN KEY(ID_Paciente) REFERENCES Pessoa(ID_Pessoa),
 FOREIGN KEY(ID_Hospital) REFERENCES Hospital(ID_Hospital),
 FOREIGN KEY(ID_Medico) REFERENCES Pessoa(ID_Pessoa));
 
 CREATE TABLE Sinal(
 						ID_Sinal integer UNSIGNED NOT NULL AUTO_INCREMENT,
-                        ID_Sensor integer UNSIGNED NOT NULL,
-                        DataSinal date,
-                        Hora time,
+                        ID_Pressao integer UNSIGNED,
+                        ID_Oxi integer UNSIGNED,
+                        ID_Ritmo integer UNSIGNED,
+                        ID_Temp integer UNSIGNED,
+                        dataHora TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
                         Valor float,
-PRIMARY KEY(ID_Sinal, ID_Sensor),
-FOREIGN KEY(ID_Sensor) REFERENCES Sensor(ID_Sensor));
+PRIMARY KEY(ID_Sinal),
+FOREIGN KEY(ID_Pressao) REFERENCES SensorPressao(ID_Pressao),
+FOREIGN KEY(ID_Oxi) REFERENCES SensorOxi(ID_Oxi),
+FOREIGN KEY(ID_Ritmo) REFERENCES SensorRitmo(ID_Ritmo),
+FOREIGN KEY(ID_Temp) REFERENCES SensorTemp(ID_Temp));
 
 CREATE TABLE AtendeEm(
 						ID_Medico integer UNSIGNED NOT NULL,
