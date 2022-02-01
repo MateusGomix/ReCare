@@ -8,7 +8,7 @@
     $id = $_SESSION['nome']['ID_PESSOA'];
     $nome = $_SESSION['nome']['NOME'];
 
-    $select = "SELECT pessoa.Nome, paciente.TelefoneContato FROM pessoa 
+    $select = "SELECT pessoa.ID_Pessoa, pessoa.Nome, paciente.TelefoneContato FROM pessoa 
         INNER JOIN paciente 
         ON pessoa.ID_Pessoa = paciente.ID_Paciente 
         WHERE paciente.ID_Medico = $id";
@@ -22,7 +22,9 @@
 
     <?php foreach ($pacientes as $paciente) { ?>
         <p>
-            Paciente: <?php echo $paciente['Nome']; ?> <br>
+            <a href="paciente.php?id=<?php echo $paciente['ID_Pessoa']; ?>">
+                Paciente: <?php echo $paciente['Nome']; ?> 
+            <a> <br>
             Contato: <?php echo $paciente['TelefoneContato']; ?>
         </p>
     <?php } ?>
