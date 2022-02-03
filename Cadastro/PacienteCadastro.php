@@ -9,6 +9,7 @@ $senha = MD5($_POST['senha']);
 $contato = $_POST['contato'];
 $cuidador = $_POST['cuidador'];
 $medico = $_POST['medico'];
+$idAdmin = $_COOKIE['adminID'];
 
 if($senha == "" || $senha == null){ //Senha não preenchida
   echo"<script language='javascript' type='text/javascript'>alert('O campo 'Senha' deve ser preenchido');window.location.href='PacienteCadastro.html';</script>";
@@ -76,6 +77,34 @@ else{ //Dados sujeitos a cadastro
           echo"<script language='javascript' type='text/javascript'>alert('Não foi possível realizar o cadastro.');window.location.href='PacienteCadastro.html';</script>";
         }
         else{
+          $query = "INSERT INTO SensorPressao (ID_Paciente, ID_Hospital, ID_Medico) 
+                    VALUES ('$idarray',
+                    (SELECT DISTINCT ID_Hospital FROM Hospital
+                    WHERE Hospital.ID_Admin = '$idAdmin'),
+                    '$idmedarray')";
+          $insert2 = mysqli_query($connect, $query, $result_mode = MYSQLI_STORE_RESULT);
+
+          $query = "INSERT INTO SensorOxi (ID_Paciente, ID_Hospital, ID_Medico) 
+                    VALUES ('$idarray',
+                    (SELECT DISTINCT ID_Hospital FROM Hospital
+                    WHERE Hospital.ID_Admin = '$idAdmin'),
+                    '$idmedarray')";
+          $insert2 = mysqli_query($connect, $query, $result_mode = MYSQLI_STORE_RESULT);
+
+          $query = "INSERT INTO SensorRitmo (ID_Paciente, ID_Hospital, ID_Medico) 
+                    VALUES ('$idarray',
+                    (SELECT DISTINCT ID_Hospital FROM Hospital
+                    WHERE Hospital.ID_Admin = '$idAdmin'),
+                    '$idmedarray')";
+          $insert2 = mysqli_query($connect, $query, $result_mode = MYSQLI_STORE_RESULT);
+
+          $query = "INSERT INTO SensorTemp (ID_Paciente, ID_Hospital, ID_Medico) 
+                    VALUES ('$idarray',
+                    (SELECT DISTINCT ID_Hospital FROM Hospital
+                    WHERE Hospital.ID_Admin = '$idAdmin'),
+                    '$idmedarray')";
+          $insert2 = mysqli_query($connect, $query, $result_mode = MYSQLI_STORE_RESULT);
+
           echo"<script language='javascript' type='text/javascript'>alert('Cadastro realizado com sucesso!');window.location.href='../login.html';</script>";
         }
       }
@@ -92,6 +121,33 @@ else{ //Dados sujeitos a cadastro
           $insert = mysqli_query($connect, $query, $result_mode = MYSQLI_STORE_RESULT);
 
           if($insert){
+            $query = "INSERT INTO SensorPressao (ID_Paciente, ID_Hospital, ID_Medico) 
+                    VALUES ('$idarray',
+                    (SELECT DISTINCT ID_Hospital FROM Hospital
+                    WHERE Hospital.ID_Admin = '$idAdmin'),
+                    '$idmedarray')";
+          $insert2 = mysqli_query($connect, $query, $result_mode = MYSQLI_STORE_RESULT);
+
+          $query = "INSERT INTO SensorOxi (ID_Paciente, ID_Hospital, ID_Medico) 
+                    VALUES ('$idarray',
+                    (SELECT DISTINCT ID_Hospital FROM Hospital
+                    WHERE Hospital.ID_Admin = '$idAdmin'),
+                    '$idmedarray')";
+          $insert2 = mysqli_query($connect, $query, $result_mode = MYSQLI_STORE_RESULT);
+
+          $query = "INSERT INTO SensorRitmo (ID_Paciente, ID_Hospital, ID_Medico) 
+                    VALUES ('$idarray',
+                    (SELECT DISTINCT ID_Hospital FROM Hospital
+                    WHERE Hospital.ID_Admin = '$idAdmin'),
+                    '$idmedarray')";
+          $insert2 = mysqli_query($connect, $query, $result_mode = MYSQLI_STORE_RESULT);
+
+          $query = "INSERT INTO SensorTemp (ID_Paciente, ID_Hospital, ID_Medico) 
+                    VALUES ('$idarray',
+                    (SELECT DISTINCT ID_Hospital FROM Hospital
+                    WHERE Hospital.ID_Admin = '$idAdmin'),
+                    '$idmedarray')";
+          $insert2 = mysqli_query($connect, $query, $result_mode = MYSQLI_STORE_RESULT);
             echo"<script language='javascript' type='text/javascript'>alert('Cadastro realizado com sucesso!');window.location.href='../login.html';</script>";
           }
           else{
@@ -104,6 +160,33 @@ else{ //Dados sujeitos a cadastro
           $insert = mysqli_query($connect, $query, $result_mode = MYSQLI_STORE_RESULT);
 
           if($insert){
+            $query = "INSERT INTO SensorPressao (ID_Paciente, ID_Hospital, ID_Medico) 
+                    VALUES ('$idarray',
+                    (SELECT DISTINCT ID_Hospital FROM Hospital
+                    WHERE Hospital.ID_Admin = '$idAdmin'),
+                    '$idmedarray')";
+          $insert2 = mysqli_query($connect, $query, $result_mode = MYSQLI_STORE_RESULT);
+
+          $query = "INSERT INTO SensorOxi (ID_Paciente, ID_Hospital, ID_Medico) 
+                    VALUES ('$idarray',
+                    (SELECT DISTINCT ID_Hospital FROM Hospital
+                    WHERE Hospital.ID_Admin = '$idAdmin'),
+                    '$idmedarray')";
+          $insert2 = mysqli_query($connect, $query, $result_mode = MYSQLI_STORE_RESULT);
+
+          $query = "INSERT INTO SensorRitmo (ID_Paciente, ID_Hospital, ID_Medico) 
+                    VALUES ('$idarray',
+                    (SELECT DISTINCT ID_Hospital FROM Hospital
+                    WHERE Hospital.ID_Admin = '$idAdmin'),
+                    '$idmedarray')";
+          $insert2 = mysqli_query($connect, $query, $result_mode = MYSQLI_STORE_RESULT);
+
+          $query = "INSERT INTO SensorTemp (ID_Paciente, ID_Hospital, ID_Medico) 
+                    VALUES ('$idarray',
+                    (SELECT DISTINCT ID_Hospital FROM Hospital
+                    WHERE Hospital.ID_Admin = '$idAdmin'),
+                    '$idmedarray')";
+          $insert2 = mysqli_query($connect, $query, $result_mode = MYSQLI_STORE_RESULT);
             echo"<script language='javascript' type='text/javascript'>alert('Cadastro realizado, porém cuidador não encontrado e deixado em branco.');window.location.href='PacienteCadastro.html';</script>";
           }
           else{
