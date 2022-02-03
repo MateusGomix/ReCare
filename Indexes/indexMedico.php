@@ -3,7 +3,7 @@
     include('verifica_login.php');
 
     $mysql = new mysqli('localhost', 'root', '', 'recare');
-    $mysql->set_charset('utf-8');
+    //$mysql->set_charset('utf-8');
 
     $id = $_SESSION['nome']['ID_PESSOA'];
     $nome = $_SESSION['nome']['NOME'];
