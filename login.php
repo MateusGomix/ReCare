@@ -42,7 +42,7 @@ else{ //Dados sujeitos a login
       setcookie("cpf", $cpf);
       $nome = mysqli_fetch_assoc($select);
       $_SESSION['nome'] = $nome;
-      echo"window.location.href='indexCuidador.html';</script>";
+      echo"<script language = 'javascript' type='text/javascript'>window.location.href='Indexes/indexCuidador.php';</script>";
     }
     else{ //Incorretos
       echo"<script language='javascript' type='text/javascript'>alert('CPF e/ou senha incorretos!');window.location.href='login.html';</script>";
