@@ -22,10 +22,12 @@
 
     <?php foreach ($pacientes as $paciente) { ?>
         <p>
-            <a href="paciente.php?id=<?php echo $paciente['ID_Pessoa']; ?>">
-                Paciente: <?php echo $paciente['Nome']; ?> 
-            <a> <br>
-            Contato: <?php echo $paciente['TelefoneContato']; ?>
+            Paciente: <?php echo $paciente['Nome']; ?> <br>
+            Contato: <?php echo $paciente['TelefoneContato']; ?> <br>
+            <a href="mostraOxi.php?id=<?php echo $paciente['ID_Pessoa']; ?>">Oxigenação<a>
+            <a href="mostraPressao.php?id=<?php echo $paciente['ID_Pessoa']; ?>">Pressão<a>
+            <a href="mostraRitmo.php?id=<?php echo $paciente['ID_Pessoa']; ?>">Ritmo Cardíaco<a>
+            <a href="mostraTemp.php?id=<?php echo $paciente['ID_Pessoa']; ?>">Temperatura<a>
         </p>
     <?php } ?>
 
