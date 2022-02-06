@@ -23,34 +23,56 @@
     $medicos = $result->fetch_all(MYSQLI_ASSOC);
 
 ?>
+<link rel="stylesheet" href="../css/indexAdmin.css" type="text/css">
+<link rel="stylesheet" href="../css/cadastro-cabecalho.css" type="text/css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap" rel="stylesheet">
 
-<h2>Seja Bem-Vindo, senhor Admin <?php echo $_SESSION['nome']['NOME'];?></h2>
+<header>
+    <div class="cabecalho">
+        <nav>
+            <ul style="width: 50%; margin: unset;">
+                <label>Re<span id="color">Care</span></label>
+                <li><a href="../cadastro/Cadastro.html">CADASTRAR</a></li>
+                <li><a href="indexAdmin.php">REMOVER</a></li>
+                <li><a href="logout.php">SAIR</a></li>
+            </ul>
+            <p id="usuario">Usuário: <?php echo $_SESSION['nome']['NOME'];?>
+            <p>
 
-    <p>
-        Para remover um médico dos registros de seu hospital, clique sobre o seu nome:<br>
-    </p>
-
-    <?php foreach ($medicos as $paciente) { ?>
-        <p>
-            <a href="removemedico.php?id=<?php echo $paciente['ID_Pessoa']; ?>">
-                Paciente: <?php echo $paciente['Nome']; ?> 
-            <a> <br>
-            Contato: <?php echo $paciente['Telefone']; ?> <br>
-            CRM: <?php echo $paciente['CRM']; ?>
-        </p>
-    <?php } ?>
-
-    <form method="POST" action="adicionaMedico.php?idAdmin=<?php echo $id; ?>" class="formulario">
-      <div class="form-entrada">
-        <label>CPF do médico: </label><input type="number" name="cpf" id="cpf" class="entrada" required>
-      </div>
-      <div class="cadastrar">
-        <input type="submit" value="Adicionar à lista" id="adicionar" name="adicionar" class="entrada">
-      </div>
-    </form>
-
-    <div class="container-botao">
-        <a class="botao" href="../cadastro/Cadastro.html">Cadastre seus constituintes</a>
+        </nav>
+    </div>
+</header>
+<section>
+    <div id="titulo">
+        <h1>Insira o CPF do médico a ser adcionado, ou clique para removê-lo</h1>
     </div>
 
-<h2><a href="logout.php">Sair</a></h2>
+    <?php foreach ($medicos as $paciente) { ?>
+    <p>
+        <a class="medico" href="removemedico.php?id=<?php echo $paciente['ID_Pessoa']; ?>">
+            Médico: <?php echo $paciente['Nome']; ?>
+        </a>
+        <a class="medico">
+            Contato: <?php echo $paciente['Telefone']; ?>
+        </a>
+        <a class="medico">
+            CRM: <?php echo $paciente['CRM']; ?>
+        </a>
+    </p >
+
+    <?php } ?>
+    <div class="secao">
+        <form method="POST" action="adicionaMedico.php?idAdmin=<?php echo $id; ?>" class="formulario">
+
+            <label id="cpf_m">CPF do médico: </label>
+            <div class = "cadastro">
+                <input type="number" name="cpf" id="cpf" required>
+                <input type="submit" value="Adicionar" id="adicionar" name="adicionar">
+
+            </div>
+
+        </form>
+    </div>
+
+    </form>
