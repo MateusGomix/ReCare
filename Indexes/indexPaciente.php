@@ -18,7 +18,7 @@
 ?>
 
 <body>
-    <h2>Seja Bem-Vindo, senhor(a) Paciente(a) <?php echo $nome;?></h2>
+    <h2>Seja Bem-Vindo, senhor(a) Paciente <?php echo $nome;?></h2>
 
     <p>Sua lista de sinais:</p>
 
