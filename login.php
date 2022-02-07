@@ -25,6 +25,7 @@ else{ //Dados sujeitos a login
 
     if(mysqli_num_rows($select) > 0){ //Corretos
       setcookie("cpf", $cpf);
+      setcookie("tipo", $tipo);
       $result = mysqli_fetch_assoc($select);
       $_SESSION['nome'] = $result;
       echo"<script language = 'javascript' type='text/javascript'>window.location.href='Indexes/index$tipo.php';</script>";
@@ -35,11 +36,12 @@ else{ //Dados sujeitos a login
   }
   else{ //Login de cuidador
     //pesquisando se CPF e senha estão corretos
-    $query_select = "SELECT NOME FROM Pessoa WHERE CPF = '$cpf' AND Pessoa.Senha = '$senha'";
+    $query_select = "SELECT ID_PESSOA, NOME FROM Pessoa WHERE CPF = '$cpf' AND Pessoa.Senha = '$senha'";
     $select = mysqli_query($connect, $query_select);
 
     if(mysqli_num_rows($select) > 0){ //Corretos
       setcookie("cpf", $cpf);
+      setcookie("tipo", $tipo);
       $nome = mysqli_fetch_assoc($select);
       $_SESSION['nome'] = $nome;
       echo"<script language = 'javascript' type='text/javascript'>window.location.href='Indexes/indexCuidador.php';</script>";
