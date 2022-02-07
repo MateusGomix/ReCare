@@ -62,9 +62,9 @@ $sensor = $selectSensor->get_result()->fetch_assoc();
         </tr>
     <?php }?>
     </table>
+    
 
-
-    <a href="indexMedico.php">Voltar</a>
+    <a href="index<?php echo $_COOKIE['tipo'] ?>.php">Voltar</a>
 
 </body>
 
