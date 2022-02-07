@@ -18,7 +18,9 @@
 ?>
 
 <body>
-    <h2>Seja Bem-Vindo, senhor Médico <?php echo $nome;?></h2>
+    <h2>Seja Bem-Vindo, senhor(a) Médico(a) <?php echo $nome;?></h2>
+
+    <p>Sua lista de pacientes:</p>
 
     <?php foreach ($pacientes as $paciente) { ?>
         <p>
