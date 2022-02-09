@@ -105,7 +105,7 @@ else{ //Dados sujeitos a cadastro
                     '$idmedarray')";
           $insert2 = mysqli_query($connect, $query, $result_mode = MYSQLI_STORE_RESULT);
 
-          echo"<script language='javascript' type='text/javascript'>alert('Cadastro realizado com sucesso!');window.location.href='../login.html';</script>";
+          echo"<script language='javascript' type='text/javascript'>alert('Cadastro realizado com sucesso!');window.location.href='../Indexes/indexAdmin.php';</script>";
         }
       }
       else{ //Cuidador preenchido
@@ -148,7 +148,7 @@ else{ //Dados sujeitos a cadastro
                     WHERE Hospital.ID_Admin = '$idAdmin'),
                     '$idmedarray')";
           $insert2 = mysqli_query($connect, $query, $result_mode = MYSQLI_STORE_RESULT);
-            echo"<script language='javascript' type='text/javascript'>alert('Cadastro realizado com sucesso!');window.location.href='../login.html';</script>";
+            echo"<script language='javascript' type='text/javascript'>alert('Cadastro realizado com sucesso!');window.location.href='../Indexes/indexAdmin.php';</script>";
           }
           else{
             echo"<script language='javascript' type='text/javascript'>alert('Não foi possível realizar o cadastro.');window.location.href='PacienteCadastro.html';</script>";
@@ -190,7 +190,7 @@ else{ //Dados sujeitos a cadastro
             echo"<script language='javascript' type='text/javascript'>alert('Cadastro realizado, porém cuidador não encontrado e deixado em branco.');window.location.href='PacienteCadastro.html';</script>";
           }
           else{
-            echo"<script language='javascript' type='text/javascript'>alert('Não foi possível realizar o cadastro.');window.location.href='../login.html';</script>";
+            echo"<script language='javascript' type='text/javascript'>alert('Não foi possível realizar o cadastro.');window.location.href='../Indexes/indexAdmin.php';</script>";
           }
         }
 

@@ -34,10 +34,9 @@
             <ul style="width: 50%; margin: unset;">
                 <label>Re<span id="color">Care</span></label>
                 <li><a href="../cadastro/Cadastro.html">CADASTRAR</a></li>
-                <li><a href="indexAdmin.php">REMOVER</a></li>
                 <li><a href="logout.php">SAIR</a></li>
             </ul>
-            <p id="usuario">Usuário: <?php echo $_SESSION['nome']['NOME'];?>
+            <p id="usuario">Usuário(a): <?php echo $_SESSION['nome']['NOME'];?>
             <p>
 
         </nav>
