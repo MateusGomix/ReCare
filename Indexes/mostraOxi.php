@@ -58,14 +58,17 @@ $sensor = $selectSensor->get_result()->fetch_assoc();
         <a>ID do sensor: <?php if($sensor!= null)echo $sensor['ID_Oxi'];
                                 else echo "nenhum sensor registrado" ?></a>
     <table>
-        <tr>
-            <th>Data e hora | </th>
+
+        <tr style="flex-direction: column;">
+            <th>Data e hora</th>
+            <th>|</th>
             <th>Oxigenação</th>
         </tr>
 
         <?php foreach ($sinais as $sinal) { ?>
         <tr>
-            <td>teste<?php echo $sinal['dataHora']; ?></td>
+            <td><?php echo $sinal['dataHora']; ?></td>
+            <td>|</td>
             <td><?php echo $sinal['valor']; ?></td>
         </tr>
         <?php }?>

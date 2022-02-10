@@ -58,23 +58,16 @@ $sensor = $selectSensor->get_result()->fetch_assoc();
                                 else echo "nenhum sensor registrado" ?></a>
     <table>
 
-        <tr>
-            <th>Data e hora |</th>
-            <th>Pressão</th>
+        <tr style="flex-direction: column;">
+            <th>Data e hora</th>
+            <th>|</th>
+            <th>Pressao</th>
         </tr>
-        <tr>
-            <th>Data e hora |</th>
-            <th>Pressão</th>
-        </tr>  <tr>
-            <th>Data e hora |</th>
-            <th>Pressão</th>
-        </tr>  <tr>
-            <th>Data e hora |</th>
-            <th>Pressão</th>
-                </tr>
+
         <?php foreach ($sinais as $sinal) { ?>
         <tr>
             <td><?php echo $sinal['dataHora']; ?></td>
+            <td>|</td>
             <td><?php echo $sinal['valor']; ?></td>
         </tr>
         <?php }?>
