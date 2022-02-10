@@ -48,7 +48,7 @@
     </div>
 
     <?php foreach ($medicos as $paciente) { ?>
-    <p>
+    <p class="linha">
         <a class="medico" href="removemedico.php?id=<?php echo $paciente['ID_Pessoa']; ?>">
             Médico: <?php echo $paciente['Nome']; ?>
         </a>

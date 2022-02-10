@@ -32,40 +32,45 @@ $sensor = $selectSensor->get_result()->fetch_assoc();
 
 ?>
 
-<!DOCTYPE html>
-<html>
+<link rel="stylesheet" href="../css/indexAdmin.css" type="text/css">
+<link rel="stylesheet" href="../css/cadastro-cabecalho.css" type="text/css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap" rel="stylesheet">
 
-<head>
-    <title>Paciente</title>
-</head>
-
-<body>
-    <div>
-        <h1><?php echo $paciente['Nome'] ?></h1>
-        <p>
-            Contato: <?php echo $paciente['TelefoneContato'] ?><br>
-            ID do sensor: <?php if($sensor!= null)echo $sensor['ID_Oxi'];
-                                else echo "nenhum sensor registrado" ?>
-        </p>
+<header>
+    <div class="cabecalho">
+        <nav>
+            <ul style="width: 50%; margin: unset;">
+                <label>Re<span id="color">Care</span></label>
+                <li><a href="indexMedico.php">PACIENTES</a></li>
+                <li><a href="logout.php">SAIR</a></li>
+            </ul>
+        </nav>
     </div>
+</header>
+<section>
+    <div id="titulo">
+        <h1 style="margin: 0 auto;">Oxigenação do paciente: <?php echo $paciente['Nome'] ?></h1>
+    </div>
+
+    <p class="linha" style="width: 82%; margin-left:5px;">
+        <a>Contato: <?php echo $paciente['TelefoneContato'] ?></a>
+        <a>ID do sensor: <?php if($sensor!= null)echo $sensor['ID_Oxi'];
+                                else echo "nenhum sensor registrado" ?></a>
     <table>
+        <tr style="display:flex; flex-direction: column;">
+            <th>Data e hora:</th>
+            <th>Oxigenação:</th>
+        </tr>
 
-    <tr>
-        <th>Data e hora</th>
-        <th>Oxigenação</th>
-    </tr>
-
-    <?php foreach ($sinais as $sinal) { ?>
+        <?php foreach ($sinais as $sinal) { ?>
         <tr>
             <td><?php echo $sinal['dataHora']; ?></td>
             <td><?php echo $sinal['valor']; ?></td>
         </tr>
-    <?php }?>
+        <?php }?>
     </table>
-    
 
-    <a href="index<?php echo $_COOKIE['tipo'] ?>.php">Voltar</a>
+    </p>
 
-</body>
-
-</html>
+</section>

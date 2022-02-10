@@ -31,41 +31,46 @@ $selectSensor->execute();
 $sensor = $selectSensor->get_result()->fetch_assoc();
 
 ?>
+<link rel="stylesheet" href="../css/indexAdmin.css" type="text/css">
+<link rel="stylesheet" href="../css/cadastro-cabecalho.css" type="text/css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap" rel="stylesheet">
 
-<!DOCTYPE html>
-<html>
-
-<head>
-    <title>Paciente</title>
-</head>
-
-<body>
-    <div>
-        <h1><?php echo $paciente['Nome'] ?></h1>
-        <p>
-            Contato: <?php echo $paciente['TelefoneContato'] ?><br>
-            ID do sensor: <?php if($sensor!= null)echo $sensor['ID_Temp'];
-                                else echo "nenhum sensor registrado" ?>
-        </p>
+<header>
+    <div class="cabecalho">
+        <nav>
+            <ul style="width: 50%; margin: unset;">
+                <label>Re<span id="color">Care</span></label>
+                <li><a href="indexMedico.php">PACIENTES</a></li>
+                <li><a href="logout.php">SAIR</a></li>
+            </ul>
+        </nav>
     </div>
+</header>
+<section>
+    <div id="titulo">
+        <h1 style="margin: 0 auto;">Temperatura do paciente: <?php echo $paciente['Nome'] ?></h1>
+    </div>
+    <p class="linha" style="width: 82%; margin-left:5px;">
+
+        <a>Contato: <?php echo $paciente['TelefoneContato'] ?></a>
+        <a>ID do sensor: <?php if($sensor!= null)echo $sensor['ID_Temp'];
+                                else echo "nenhum sensor registrado" ?></a>
     <table>
 
-    <tr>
-        <th>Data e hora</th>
-        <th>Temperatura</th>
-    </tr>
+        <tr style="display:flex; flex-direction: column;">
+            <th>Data e hora:</th>
+            <th>Temperatura:</th>
+        </tr>
 
-    <?php foreach ($sinais as $sinal) { ?>
+        <?php foreach ($sinais as $sinal) { ?>
         <tr>
             <td><?php echo $sinal['dataHora']; ?></td>
             <td><?php echo $sinal['valor']; ?></td>
         </tr>
-    <?php }?>
+        <?php }?>
     </table>
 
+    </p>
 
-    <a href="index<?php echo $_COOKIE['tipo'] ?>.php">Voltar</a>
 
-</body>
-
-</html>

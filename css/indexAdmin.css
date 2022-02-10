@@ -1,8 +1,8 @@
 section {
-    
+
     width: 60%;
-   
-    margin: 0 auto; 
+    padding: 10px;
+    margin: 0 auto;
     margin-top: 30px;
     box-shadow: 0 0 1em rgb(0 0 0 / 50%);
     background-color: white;
@@ -16,40 +16,54 @@ section {
     align-items: center;
     height: 12%;
 }
-h1{
+
+h1 {
     font-weight: unset;
     margin-left: 45px;
 }
-.secao{
+
+.secao {
     height: 12%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-p{
+
+.linha {
+    color: black;
+    width: 100%;
+    margin: 0 auto;
+    
+    align-items: center;
     display: flex;
     justify-content: space-between;
     height: 12%;
     margin: unset;
-    color: white;
     font-size: 18px;
     box-shadow: 0px 2px 2px -1px rgb(0 0 0 / 20%);
     font-family: 'Rubik', sans-serif;
     font-weight: 300;
 }
-
-.formulario{
+.atualizacao{
+    color: black;
+    font-size: 18px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+}
+.formulario {
     display: flex;
     width: 100%;
     margin-bottom: unset;
     justify-content: space-between;
 }
-.formulario div{
+
+.formulario div {
     display: flex;
     height: 40px;
     width: 62%;
 }
-.medico{
+
+.medico {
     width: 50%;
     color: black;
     margin-left: 45px;
@@ -61,28 +75,32 @@ p{
     height: 100%;
     justify-content: flex-start;
 }
-.cadastro{
+
+.cadastro {
     font-family: 'Inter', sans-serif;
     height: 40px;
 }
-#cpf{
+
+#cpf {
     border: 1.5px solid #D1D5DB;
     box-sizing: border-box;
     border-radius: 8px;
     height: 100%;
     margin-right: 65px;
 }
-#adicionar{
+
+#adicionar {
     width: 175px;
     border-color: #ECEDEF;
     border-width: 2px;
     border-radius: 30px;
-    
+
 }
 
-#cpf_m{
+#cpf_m {
     font-family: 'Inter', sans-serif;
     font-size: 18px;
     width: 150px;
     margin-left: 45px;
 }
+
