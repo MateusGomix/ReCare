@@ -51,16 +51,16 @@ $sensor = $selectSensor->get_result()->fetch_assoc();
     <div id="titulo">
         <h1 style="margin: 0 auto;">Temperatura do paciente: <?php echo $paciente['Nome'] ?></h1>
     </div>
-    <p class="linha" style="width: 82%; margin-left:5px;">
+    <p class="linha">
 
         <a>Contato: <?php echo $paciente['TelefoneContato'] ?></a>
         <a>ID do sensor: <?php if($sensor!= null)echo $sensor['ID_Temp'];
                                 else echo "nenhum sensor registrado" ?></a>
     <table>
 
-        <tr style="display:flex; flex-direction: column;">
-            <th>Data e hora:</th>
-            <th>Temperatura:</th>
+        <tr >
+            <th>Data e hora |</th>
+            <th>Temperatura</th>
         </tr>
 
         <?php foreach ($sinais as $sinal) { ?>
