@@ -41,7 +41,7 @@ else{ //Dados sujeitos a cadastro
         echo"<script language='javascript' type='text/javascript'>alert('Não foi possível realizar o cadastro.');window.location.href='MedicoCadastro.html';</script>";
       }
     }
-    //Inserindo os dados em Admin
+    //Inserindo os dados em Medico
 
     //Pesquisando o ID correto
     $query_select = "SELECT ID_Pessoa FROM Pessoa WHERE CPF = '$cpf'";
@@ -55,7 +55,20 @@ else{ //Dados sujeitos a cadastro
       $insert = mysqli_query($connect, $query, $result_mode = MYSQLI_STORE_RESULT);
 
       if($insert){ //Sucesso ao inserir na tabela Medico
-        echo"<script language='javascript' type='text/javascript'>alert('Cadastro realizado com sucesso!');window.location.href='../Indexes/indexAdmin.php';</script>";
+
+        //Atualizando onde o médico atende
+        $idAdmin = $_COOKIE['adminID'];
+        $query = "INSERT INTO AtendeEm
+                           VALUES((SELECT ID_Medico FROM Medico, Pessoa 
+                           WHERE Pessoa.ID_Pessoa = Medico.ID_Medico AND Pessoa.CPF = $cpf),
+                           (SELECT DISTINCT ID_Hospital FROM Hospital, Admin 
+                           WHERE Hospital.ID_Admin = $idAdmin))";
+        $insert = mysqli_query($connect, $query, $result_mode = MYSQLI_STORE_RESULT);
+
+        if($insert){
+          echo"<script language='javascript' type='text/javascript'>alert('Cadastro realizado com sucesso!');window.location.href='../Indexes/indexAdmin.php';</script>";
+        }
+      
       }
       else{ //Erro ao inserir na tabela Medico
         echo"<script language='javascript' type='text/javascript'>alert('Não foi possível realizar o cadastro.');window.location.href='MedicoCadastro.html';</script>";
