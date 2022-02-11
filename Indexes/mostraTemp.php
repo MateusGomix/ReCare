@@ -11,6 +11,8 @@ $paciente = $selectPaciente->get_result()->fetch_assoc();
 
 $idPaciente = $_GET['id'];
 
+$tipo = $_COOKIE['tipo'];
+
 $select = "SELECT Sinal.valor, Sinal.dataHora
             FROM pessoa 
             INNER JOIN paciente ON paciente.ID_Paciente = pessoa.ID_Pessoa
@@ -44,7 +46,7 @@ $sensor = $selectSensor->get_result()->fetch_assoc();
             <nav>
                 <ul style="width: 50%; margin: unset;">
                     <label>Re<span id="color">Care</span></label>
-                    <li><a href="indexMedico.php">PACIENTES</a></li>
+                    <li><a href="index<?php echo $tipo ?>.php">VOLTAR</a></li>
                     <li><a href="logout.php">SAIR</a></li>
                 </ul>
             </nav>
