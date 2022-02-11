@@ -43,13 +43,13 @@
     <p class="linha">
 
         <a style="color:black; text-decoration: none; "
-            href="mostraOxi.php?id=<?php echo $paciente['ID_Pessoa']; ?>">O2</a>
+            href="mostraOxi.php?id=<?php echo $id; ?>">O2</a>
         <a style="color:black; text-decoration: none;"
-            href="mostraPressao.php?id=<?php echo $paciente['ID_Pessoa']; ?>">P</a>
+            href="mostraPressao.php?id=<?php echo $id; ?>">P</a>
         <a style="color:black; text-decoration: none;"
-            href="mostraRitmo.php?id=<?php echo $paciente['ID_Pessoa']; ?>">RC</a>
+            href="mostraRitmo.php?id=<?php echo $id; ?>">RC</a>
         <a style="color:black; text-decoration: none;"
-            href="mostraTemp.php?id=<?php echo $paciente['ID_Pessoa']; ?>">T°</a>
+            href="mostraTemp.php?id=<?php echo $id; ?>">T°</a>
 
     </p>
 
