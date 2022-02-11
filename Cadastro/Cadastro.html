@@ -8,7 +8,6 @@
 
   <link rel="stylesheet" href="../css/cadastro-cabecalho.css">
   <link rel="stylesheet" href="../css/cadastro-op.css">
-  <link rel="stylesheet" href="../css/footer.css">
 
   <link href="https://storyset.com/work" rel=" stylesheet">
 
@@ -21,55 +20,113 @@
 </head>
 
 <body>
-  <header>
-    <div class="cabecalho">
-      <nav>
-        <ul style="width: 50%; margin: unset;">
-          <label>Re<span id="color">Care</span></label>
-          <li><a href="./Cadastro.html">CADASTRAR</a></li>
-          <li><a href="../Indexes/indexAdmin.php">VOLTAR</a></li>
-          <li><a href="../Indexes/logout.php">SAIR</a></li>
-        </ul>
 
-      </nav>
-    </div>
-  </header>
-  <section>
-   
+  <div style="min-height: 100vh;">
+    <header>
+      <div class="cabecalho">
+        <nav>
+          <ul style="width: 50%; margin: unset;">
+            <label>Re<span id="color">Care</span></label>
+            <li><a href="./Cadastro.html">CADASTRAR</a></li>
+            <li><a href="../Indexes/indexAdmin.php">VOLTAR</a></li>
+            <li><a href="../Indexes/logout.php">SAIR</a></li>
+          </ul>
+
+        </nav>
+      </div>
+    </header>
+    <section>
+
       <h1>Escolha o tipo de cadastro</h1>
-   
-    <div class="container">
+
+      <div class="container">
 
 
 
-      <form method="POST" action="CuidadorCadastro.html">
-        <input type="submit" value="Cuidador" class="tipo-cadastro" /><br>
-      </form>
+        <form method="POST" action="CuidadorCadastro.html">
+          <input type="submit" value="Cuidador" class="tipo-cadastro" /><br>
+        </form>
 
-      <form method="POST" action="MedicoCadastro.html" id="medico">
-        <input type="submit" value="Médico" class="tipo-cadastro" /><br>
-      </form>
+        <form method="POST" action="MedicoCadastro.html" id="medico">
+          <input type="submit" value="Médico" class="tipo-cadastro" /><br>
+        </form>
 
-      <form method="POST" action="PacienteCadastro.html">
-        <input type="submit" value="Paciente" class="tipo-cadastro" /><br>
-      </form>
+        <form method="POST" action="PacienteCadastro.html">
+          <input type="submit" value="Paciente" class="tipo-cadastro" /><br>
+        </form>
+      </div>
+      </d>
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+    <footer style=" box-shadow: 0 0 1em rgb(0 0 0 / 50%); background-color:rgb(23,86,155);margin-top: 100px;">
+      <div style=" display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;">
+
+        <span style="font-size: 18px;color: white;
+            font-family: 'Rubik';
+            font-style: normal;
+            font-weight: normal;
+            line-height: 24px;
+            justify-content: center;
+            text-align: center;">
+          <p>Site desenvolvido para matéria de Engenharia de Software
+          </p>
+        </span>
+
+        <div>
+          <div>
+            <div style="font-size: 18px; color: white; flex-direction: column; display: flex;
+                    align-items: flex-start; margin: 0 auto; font-family: 'Rubik' ; font-style: normal; font-weight:
+                    normal; line-height: 24px; margin: -10px 0px 30px 45px;">
+              <h2 style=" font-weight: 300;"> Desenvolvedores:</h2>
+
+              <li style="list-style-type: none"><a style="text-decoration:none; color: white;"
+                  href="https://github.com/BeatrizIrineu"><img style="width: 25px;margin-right: 10px;"
+                    src="../image/git.png">Beatriz Irineu</a></li>
+              <li style="list-style-type: none"><a style="text-decoration:none; color: white;"
+                  href="https://github.com/dspaiva123"><img style="width: 25px;margin-right: 10px;"
+                    src="../image/git.png">Daniel Paiva</a></li>
+              <li style="list-style-type: none"><a style="text-decoration:none; color: white;"
+                  href="https://github.com/BnnSplt"><img style="width: 25px;margin-right: 10px;"
+                    src="../image/git.png">Felipe Cassiano</a></li>
+              <li style="list-style-type: none"><a style="text-decoration:none; color: white;"
+                  href="https://github.com/Luizpson"><img style="width: 25px;margin-right: 10px;"
+                    src="../image/git.png">Luiz Felipe</a></li>
+              <li style="list-style-type: none"><a style="text-decoration:none; color: white;"
+                  href="https://github.com/MateusGomix"><img style="width: 25px;margin-right: 10px;"
+                    src="../image/git.png">Mateus Gomes</a></li>
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </footer>
+    <div style=" box-shadow: 0 0 1em rgb(0 0 0 / 50%); height:6vh; background-color:white;">
+      <span style="font-size: 18px;
+    color: black;
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 24px;
+    justify-content: center;
+    display: flex;
+    height: 100%;
+    align-items: center;">2022. Todos os direitos reservados.</span>
     </div>
-
-  </section>
-
-
-
-
-
-
-
-
-
-
-
-  <footer>
-
-  </footer>
 </body>
-
 </html>

@@ -62,7 +62,7 @@
         </a>
     </p>
     <?php } ?>
-    
+
     <form method="POST" action="mudaCuidador.php?idPaciente=<?php echo $id; ?>" class="formulario linha">
         <label class="atualizacao">Atualize seu cuidador: </label>
         <div class="cadastro">
@@ -70,4 +70,63 @@
             <input type="submit" value="Adicionar" id="adicionar" name="adicionar">
         </div>
     </form>
-    </section>
+</section>
+<footer style=" box-shadow: 0 0 1em rgb(0 0 0 / 50%); background-color:rgb(23,86,155);">
+    <div style=" display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;">
+
+        <span style="font-size: 18px;color: white;
+            font-family: 'Rubik';
+            font-style: normal;
+            font-weight: normal;
+            line-height: 24px;
+            justify-content: center;
+            text-align: center;">
+            <p>Site desenvolvido para matéria de Engenharia de Software
+            </p>
+        </span>
+
+        <div>
+            <div>
+                <div style="font-size: 18px; color: white; flex-direction: column; display: flex;
+                    align-items: flex-start; margin: 0 auto; font-family: 'Rubik' ; font-style: normal; font-weight:
+                    normal; line-height: 24px; margin: -10px 0px 30px 45px;">
+                    <h2 style=" font-weight: 300;"> Desenvolvedores:</h2>
+
+                    <li style="list-style-type: none"><a style="text-decoration:none; color: white;"
+                            href="https://github.com/BeatrizIrineu"><img style="width: 25px;margin-right: 10px;"
+                                src="../image/git.png">Beatriz Irineu</a></li>
+                    <li style="list-style-type: none"><a style="text-decoration:none; color: white;"
+                            href="https://github.com/dspaiva123"><img style="width: 25px;margin-right: 10px;"
+                                src="../image/git.png">Daniel Paiva</a></li>
+                    <li style="list-style-type: none"><a style="text-decoration:none; color: white;"
+                            href="https://github.com/BnnSplt"><img style="width: 25px;margin-right: 10px;"
+                                src="../image/git.png">Felipe Cassiano</a></li>
+                    <li style="list-style-type: none"><a style="text-decoration:none; color: white;"
+                            href="https://github.com/Luizpson"><img style="width: 25px;margin-right: 10px;"
+                                src="../image/git.png">Luiz Felipe</a></li>
+                    <li style="list-style-type: none"><a style="text-decoration:none; color: white;"
+                            href="https://github.com/MateusGomix"><img style="width: 25px;margin-right: 10px;"
+                                src="../image/git.png">Mateus Gomes</a></li>
+
+                </div>
+
+
+
+            </div>
+        </div>
+</footer>
+<div style=" box-shadow: 0 0 1em rgb(0 0 0 / 50%); height:6vh; background-color:white;">
+    <span style="font-size: 18px;
+    color: black;
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 24px;
+    justify-content: center;
+    display: flex;
+    height: 100%;
+    align-items: center;">2022. Todos os direitos reservados.</span>
+</div>

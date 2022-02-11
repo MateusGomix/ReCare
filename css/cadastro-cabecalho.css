@@ -1,8 +1,11 @@
 body {
     background-image: url(../image/back.jpeg);
     background-size: cover;
+    margin: 0;
 }
-
+footer{
+    margin-top: 100px;
+}
 header {
     height: 10vh;
 }
