@@ -59,10 +59,10 @@ else{ //Dados sujeitos a cadastro
         //Atualizando onde o médico atende
         $idAdmin = $_COOKIE['adminID'];
         $query = "INSERT INTO AtendeEm
-                           VALUES((SELECT ID_Medico FROM Medico, Pessoa 
-                           WHERE Pessoa.ID_Pessoa = Medico.ID_Medico AND Pessoa.CPF = $cpf),
-                           (SELECT DISTINCT ID_Hospital FROM Hospital, Admin 
-                           WHERE Hospital.ID_Admin = $idAdmin))";
+                  VALUES((SELECT ID_Medico FROM Medico, Pessoa 
+                  WHERE Pessoa.ID_Pessoa = Medico.ID_Medico AND Pessoa.CPF = $cpf),
+                  (SELECT DISTINCT ID_Hospital FROM Hospital, Admin 
+                  WHERE Hospital.ID_Admin = $idAdmin))";
         $insert = mysqli_query($connect, $query, $result_mode = MYSQLI_STORE_RESULT);
 
         if($insert){
