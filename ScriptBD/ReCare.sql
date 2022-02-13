@@ -51,9 +51,6 @@ FOREIGN KEY(ID_Admin) REFERENCES Pessoa(ID_Pessoa));
 
 CREATE TABLE SensorPressao(
 						ID_Pressao integer UNSIGNED NOT NULL AUTO_INCREMENT,
-                        Frequencia float,
-                        Lim_Inf float,
-                        Lim_Sup float,
                         ID_Paciente integer UNSIGNED,
                         ID_Hospital integer UNSIGNED,
                         ID_Medico integer UNSIGNED,
@@ -64,9 +61,6 @@ FOREIGN KEY(ID_Medico) REFERENCES Pessoa(ID_Pessoa));
 
 CREATE TABLE SensorOxi(
 						ID_Oxi integer UNSIGNED NOT NULL AUTO_INCREMENT,
-                        Frequencia float,
-                        Lim_Inf float,
-                        Lim_Sup float,
                         ID_Paciente integer UNSIGNED,
                         ID_Hospital integer UNSIGNED,
                         ID_Medico integer UNSIGNED,
@@ -77,9 +71,6 @@ FOREIGN KEY(ID_Medico) REFERENCES Pessoa(ID_Pessoa));
 
 CREATE TABLE SensorRitmo(
 						ID_Ritmo integer UNSIGNED NOT NULL AUTO_INCREMENT,
-                        Frequencia float,
-                        Lim_Inf float,
-                        Lim_Sup float,
                         ID_Paciente integer UNSIGNED,
                         ID_Hospital integer UNSIGNED,
                         ID_Medico integer UNSIGNED,
@@ -90,9 +81,6 @@ FOREIGN KEY(ID_Medico) REFERENCES Pessoa(ID_Pessoa));
 
 CREATE TABLE SensorTemp(
 						ID_Temp integer UNSIGNED NOT NULL AUTO_INCREMENT,
-                        Frequencia float,
-                        Lim_Inf float,
-                        Lim_Sup float,
                         ID_Paciente integer UNSIGNED,
                         ID_Hospital integer UNSIGNED,
                         ID_Medico integer UNSIGNED,
