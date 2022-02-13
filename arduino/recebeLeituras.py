@@ -5,23 +5,6 @@ pip install webbot
 pip install mysql.connector
 
 """
-
-"""
-Exemplos que serao usados (So pra lembrar msm)
-
-Paciente: Mariane Aparecida Moraes - SENSOR #1
-CPF: 1492306720
-SENHA: 123456
-
-Medica: Nicole Louise Viana
-CPF: 4458342770
-SENHA: 123456
-
-Cuidadora: Luana Silvana Novaes
-CPF: 29772995727
-SENHA: 123456
-
-"""
 #Importando as Bibliotecas:
 from re import compile, fullmatch
 from webbot import Browser
@@ -37,6 +20,9 @@ insert_Oxi = """INSERT INTO Sinal (Valor, ID_Oxi) VALUES (%s, %s)"""
 insert_Pres = """INSERT INTO Sinal (Valor, ID_Pressao) VALUES (%s, %s)"""
 insert_Ritmo = """INSERT INTO Sinal (Valor, ID_Ritmo) VALUES (%s, %s)"""
 insert_Temp = """INSERT INTO Sinal (Valor, ID_Temp) VALUES (%s, %s)"""
+
+#Recebendo o id do sensor no qual serão enviadas as leituras
+idSensor = int(input("Digite o ID do sensor a receber as leituras"))
 
 #Recebendo a senha do DB
 passDB = getpass("Digite sua senha do LocalHost DB")
@@ -110,10 +96,10 @@ for i in range(10):
         tAtual = (float(linhas[3].split(':')[1])) #Separando a quarta leitura (Temp)
 
         #Criando as tuplas para inserir no registro de sinais do sensor #1
-        oxiAtual = (oAtual, 1) 
-        presAtual = (pAtual, 1)
-        bpmAtual = (rAtual, 1)
-        tempAtual = (tAtual, 1)
+        oxiAtual = (oAtual, idSensor) 
+        presAtual = (pAtual, idSensor)
+        bpmAtual = (rAtual, idSensor)
+        tempAtual = (tAtual, idSensor)
 
         #Executando as insercoes
         cursor.execute(insert_Oxi, oxiAtual)
