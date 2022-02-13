@@ -7,7 +7,7 @@ pip install mysql.connector
 """
 
 """
-Exemplos que serao usados pelo Daniel (So pra lembrar msm)
+Exemplos que serao usados (So pra lembrar msm)
 
 Paciente: Mariane Aparecida Moraes - SENSOR #1
 CPF: 1492306720
@@ -107,7 +107,7 @@ for i in range(10):
         oAtual = (float(linhas[0].split(':')[1])) #Separando a primeira leitura (Ox)
         pAtual = (float(linhas[1].split(':')[1])) #Separando a segunda leitura (Press)
         rAtual = (float(linhas[2].split(':')[1])) #Separando a terceira leitura (Ritmo)
-        tAtual = (float(linhas[2].split(':')[1])) #Separando a quarta leitura (Temp)
+        tAtual = (float(linhas[3].split(':')[1])) #Separando a quarta leitura (Temp)
 
         #Criando as tuplas para inserir no registro de sinais do sensor #1
         oxiAtual = (oAtual, 1) 
@@ -118,7 +118,7 @@ for i in range(10):
         #Executando as insercoes
         cursor.execute(insert_Oxi, oxiAtual)
         cursor.execute(insert_Pres, presAtual)
-        cursor.execute(insert_Ritmo, tempAtual)
+        cursor.execute(insert_Ritmo, bpmAtual)
         cursor.execute(insert_Temp, tempAtual)
 
         #Efetivando as insercoes realizadas
