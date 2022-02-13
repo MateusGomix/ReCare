@@ -19,7 +19,7 @@ $select = "SELECT Sinal.valor, Sinal.dataHora
             INNER JOIN sensorRitmo ON sensorRitmo.ID_Paciente = pessoa.ID_Pessoa
             INNER JOIN Sinal ON sensorRitmo.ID_Ritmo = Sinal.ID_Ritmo
             WHERE pessoa.ID_Pessoa = $idPaciente
-            ORDER BY Sinal.dataHora";
+            ORDER BY Sinal.dataHora DESC";
 
 $result = $mysql->query($select);
 $sinais = $result->fetch_all(MYSQLI_ASSOC);
