@@ -111,3 +111,6 @@ for i in range(10):
 if connection.is_connected():
     connection.close() #desconectando o DB
     print("MySQL connection is closed")
+
+web.click(text='Parar')
+web.close_current_tab()
