@@ -5,6 +5,23 @@ pip install webbot
 pip install mysql.connector
 
 """
+
+"""
+Exemplos que serao usados pelo Daniel (So pra lembrar msm)
+
+Paciente: Mariane Aparecida Moraes - SENSOR #1
+CPF: 1492306720
+SENHA: 123456
+
+Medica: Nicole Louise Viana
+CPF: 4458342770
+SENHA: 123456
+
+Cuidadora: Luana Silvana Novaes
+CPF: 29772995727
+SENHA: 123456
+
+"""
 #Importando as Bibliotecas:
 from re import compile, fullmatch
 from webbot import Browser
